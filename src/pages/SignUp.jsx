@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import icon from "../icon.svg"
-import { colors, Divider } from '@mui/material'
+import { Divider } from '@mui/material'
 import { useNavigate } from 'react-router-dom';
 import bitcoin from "../bitcoin.png"
 import eth from "../eth.png"
@@ -8,8 +8,9 @@ import coin from "../coin.png"
 import doge from "../doge.png"
 function SignUp() {
     const navigate = useNavigate();
-    const handleSubmit = () => {
-        navigate("/feature")
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        navigate("/feature", { replace: true })
     }
 
     const handleChange = (e) => {
@@ -77,7 +78,7 @@ function SignUp() {
                     padding: " 0px",
                     width: "100%",
 
-                }} onSubmit={handleSubmit}>
+                }} onSubmit={(e)=>handleSubmit(e)}>
                     <div style={styles.formInput}>
                         <input
                             type="text"
@@ -181,7 +182,6 @@ const styles = {
         padding: "24px 32px",
         // fontSize: "19px",
         width: "calc(100% - 64px)",
-        color: "var(--secondary-color)",
         borderRadius: "13px",
         color: "black"
     },

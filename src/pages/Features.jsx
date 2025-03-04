@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import icon from "../icon.svg"
-import { colors, Divider, Typography } from '@mui/material'
-import { useNavigate } from 'react-router-dom';
+import { Typography } from '@mui/material'
 import calender from "../Calender.png"
 import globe from "../Globe.png"
 import cashback from "../Cashback.svg"
@@ -43,21 +42,21 @@ function Features() {
             <div style={styles.header}  > YatriPay <img src={icon} alt='logo'/></div>
             {
                 features.map((item, index) => {
-                    return index == featureNo && (
+                    return index === featureNo && (
                         <div>
                             <div style={{ ...styles.subheader, width: "100%", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", }}  >
                                 <Typography style={{ fontWeight: "700", textAlign: "center", fontSize: "60px", width: "70%", }}> {item.text} </Typography>
                             </div>
                             <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>{
-                                index == 0 ?
+                                index === 0 ?
                                     <img src={calender} alt="feature-img" style={{ width: "40%" }} />
-                                    : index == 1 ?
+                                    : index === 1 ?
                                         <img src={globe} alt="feature-img" style={{ paddingTop: "20px", paddingLeft: "50px", width: "50%" }} />
-                                        : index == 2 ?
+                                        : index === 2 ?
                                             <img src={performance} alt="feature-img" style={{ paddingTop: "20px", paddingLeft: "50px", width: "50%" }} />
-                                            : index == 3 ?
+                                            : index === 3 ?
                                                 <img src={globe} alt="feature-img" style={{ paddingTop: "20px", paddingLeft: "50px", width: "35%" }} />
-                                                : index == 4 ?
+                                                : index === 4 ?
                                                     <div style={{ display: "flex", flexDirection:"column", justifyContent: "center", alignItems: "center" }}>
                                                         <div style={{ fontSize: "120px", fontWeight: "700" }}> 30% p.a. </div>
                                                         <div style={{ fontSize: "20px", fontWeight: "400", paddingTop:"20px" }}> Annual return with <span style={{ color:"var(--secondary-text-color)" }}>yatripay</span></div>

@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-import icon from "../icon.svg"
-import { colors, Divider } from '@mui/material'
+import icon from "../icon.svg";
 import { useNavigate } from 'react-router-dom';
 function ForgotPassword() {
     const navigate = useNavigate();
@@ -8,8 +7,8 @@ function ForgotPassword() {
 
     const handleSubmit = (e,prev) => {
         e.preventDefault();
-        if(prev==0)setPage(prev + 1);
-        else navigate("/feature")
+        if(prev===0)setPage(prev + 1);
+        else navigate("/feature", { replace: true })
     }
 
     const handleChange = (e) => {
@@ -48,7 +47,7 @@ function ForgotPassword() {
 
                 }} onSubmit={(e) => handleSubmit(e, page)}>
                     {
-                        page == 0 ?
+                        page === 0 ?
                             <div style={styles.formInput}>
                                 <input
                                     type="text"
@@ -150,7 +149,6 @@ const styles = {
         padding: "24px 32px",
         // fontSize: "19px",
         width: "calc(100% - 64px)",
-        color: "var(--secondary-color)",
         borderRadius: "13px",
         color: "black"
     },
