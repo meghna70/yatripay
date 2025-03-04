@@ -37,20 +37,20 @@ function SignUp() {
             <div style={{overflow:"hidden"}} class="blob"></div>
             <div style={{overflow:"hidden"}} class="blob bolb-right"></div>
             <div style={{ padding: "15px", position: "absolute", zIndex: "-1", top: "40%", left: "15%", borderRadius: "100%", backgroundColor: "rgba(254, 231, 21, 0.2)" }}>
-                <img src={bitcoin} />
+                <img alt="" src={bitcoin} />
             </div>
             <div style={{ padding: "15px", position: "absolute", zIndex: "-1", top: "70%", left: "20%", borderRadius: "100%", backgroundColor: "rgba(90, 40, 176, 0.2)" }}>
-                <img src={eth} />
+                <img alt="" src={eth} />
             </div>
             <div style={{ padding: "15px", position: "absolute", zIndex: "-1", top: "40%", right: "15%", borderRadius: "100%", backgroundColor: "rgba(204, 49, 61, 0.2)" }}>
-                <img src={doge} />
+                <img alt="" src={doge} />
             </div>
             <div style={{ padding: "15px", position: "absolute", zIndex: "-1", top: "70%", right: "20%", borderRadius: "100%", backgroundColor: "rgba(51, 135, 90, 0.2)" }}>
-                <img src={coin} />
+                <img alt="" src={coin} />
             </div>
 
 
-            <div style={styles.header}  > YatriPay <img src={icon} alt='logo' style={{}} /></div>
+            <div style={styles.header}  > YatriPay <img src={icon} alt='logo' /></div>
             <div style={styles.subheader}> Sign up with us!</div>
             <div style={styles.socialsBtn}>
                 <div style={styles.facebook}>f</div>

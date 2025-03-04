@@ -8,15 +8,6 @@ import cashback from "../Cashback.svg"
 import performance from "../performance.svg"
 
 function Features() {
-    const navigate = useNavigate();
-    const handleSubmit = () => {
-        navigate("/features")
-    }
-
-    const handleChange = (e) => {
-
-    };
-
     const [featureNo, setFeatureNo] = useState(0);
     const features = [
         {
@@ -49,7 +40,7 @@ function Features() {
         }}>
             <div class="blob"></div>
             <div class="blob bolb-right"></div>
-            <div style={styles.header}  > YatriPay <img src={icon} alt='logo' style={{}} /></div>
+            <div style={styles.header}  > YatriPay <img src={icon} alt='logo'/></div>
             {
                 features.map((item, index) => {
                     return index == featureNo && (
@@ -71,7 +62,6 @@ function Features() {
                                                         <div style={{ fontSize: "120px", fontWeight: "700" }}> 30% p.a. </div>
                                                         <div style={{ fontSize: "20px", fontWeight: "400", paddingTop:"20px" }}> Annual return with <span style={{ color:"var(--secondary-text-color)" }}>yatripay</span></div>
                                                     </div>
-                                                    // <img src={globe} alt="feature-img" />
                                                     : <img src={cashback} alt="feature-img" />
 
                             }
